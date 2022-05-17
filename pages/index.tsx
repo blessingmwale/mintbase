@@ -4,13 +4,13 @@ import NavBar from "../components/NavBar";
 import { MbThingCard, MbIcon, EIconName, MbSmallCard } from 'mintbase-ui';
 import { useWallet } from '../context/MintbaseWalletProvider';
 import Minter from "../components/Minter";
-import { useQuery } from "@apollo/client";
+import { useLazyQuery, useQuery } from "@apollo/client";
 import { FETCH_NFT } from "../queries/example";
 
 const Home: NextPage = () => {
 
   const { wallet, isConnected, details } = useWallet()
-  
+
   return (
     <>
       <NavBar isConnected={isConnected} wallet={wallet} details={details} />
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         </div>
       </header>
 
-      <Minter/>
+      {isConnected ? <Minter /> : <h2>Not Connected</h2>}
     </>
   );
 };

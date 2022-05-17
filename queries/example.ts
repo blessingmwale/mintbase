@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 const FETCH_NFT = gql`
-    query MyQuery {
+    query  {
         store(limit: 10) {
         owner
         name
