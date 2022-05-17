@@ -25,8 +25,9 @@ function Minter() {
                 !loading?
                 data.store.map((store) => (
                     <MbThingCard
+                    
                     cardInfo={{
-                        botLeftImage: 'https://coldcdn.com/api/cdn/bronil/JXl58b_p9iYzeFutFC5GcDCjsxppyFt5rRkQt4Su4LU',
+                        botLeftImage: store.iconBase64 ? store.iconBase64 :'https://coldcdn.com/api/cdn/bronil/JXl58b_p9iYzeFutFC5GcDCjsxppyFt5rRkQt4Su4LU',
                         botRightIcon: 'filter_none',
                         botRightText: '5/10',
                         centerElement: <img className="h-full w-full object-cover" src="./red.png" />,
@@ -38,6 +39,7 @@ function Minter() {
                         onUpperLeftClick: function noRefCheck() { },
                         onUpperRightClick: function noRefCheck() { },
                         upperLeftText: '1',
+                        loading :loading,
                         upperRightElement: <MbIcon name={EIconName.MORE} color={""} />
                     }}
                 />
