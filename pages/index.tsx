@@ -19,8 +19,9 @@ const Home: NextPage = () => {
           <div className="mx-auto items-center" >
             <div className="" >
               <MbSmallCard
+                className="rounded-full"
                 card={{
-                  centerElement: <img className=" h-full w-full object-cover" src="https://coldcdn.com/api/cdn/bronil/JXl58b_p9iYzeFutFC5GcDCjsxppyFt5rRkQt4Su4LU" />,
+                  centerElement: <img className="rounded-full h-full w-full object-cover" src="https://coldcdn.com/api/cdn/bronil/JXl58b_p9iYzeFutFC5GcDCjsxppyFt5rRkQt4Su4LU" />,
                   title: isConnected ? details.accountId : 'Not Connected'
                 }}
                 cardType="profile"
