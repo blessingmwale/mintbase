@@ -1,11 +1,13 @@
 import { gql } from "@apollo/client";
 
-const EXAMPLE_QUERY = gql`
-  query ExampleQuery {
-    stores(limit: 5) {
-      id
+const FETCH_NFT = gql`
+    query MyQuery {
+        store(limit: 10) {
+        owner
+        name
+        iconBase64
+        }
     }
-  }
-`;
+  `;
 
-export { EXAMPLE_QUERY };
+export { FETCH_NFT };
